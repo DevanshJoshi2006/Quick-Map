@@ -1,0 +1,309 @@
+PROJECT: Quick Map
+
+Ye file team discussion aur speaking script ke liye hai.
+Language style: Hinglish, spoken English, simple aur natural.
+
+==================================================
+TEAM MEMBER 1
+MODULE: Main Flow and User Interaction
+==================================================
+
+What this person can say:
+
+"Mera part main flow aur user interaction module hai. Hamare project me jab program start hota hai tab user ko options milte hain, jaise places dekhne hain ya new place add karna hai. Agar user places dekhna choose karta hai to usko aur options dikhte hain, jaise all places, search by name, filter by category, sort by rating, sort by distance, aur sort by popularity.
+
+Agar user new place add karta hai to system usse place name, category, popularity, aur kuch categories ke case me rating leta hai. Temple category ke case me rating nahi poochi jaati. Is tarah humne user interaction ko simple aur realistic rakha hai.
+
+Is module ka main benefit ye hai ki pura project ek proper flow me chalta hai. User ko backend ka internal logic samajhne ki zarurat nahi padti. Wo sirf options choose karta hai aur system uske hisaab se result show karta hai.
+
+Abhi tak humne basic menu-driven console flow successfully implement kar diya hai. Future me isi module ko proper frontend ya app interface me convert kiya ja sakta hai."
+
+What code this person should explain:
+
+1. QuickMap.java
+   - main() program start karta hai
+   - main menu show karta hai
+   - see places aur add place options handle karta hai
+   - showViewingOptions() viewing options handle karta hai
+   - addNewPlace() user input lekar new place add karta hai
+   - printPlaces() place list display karta hai
+
+2. PlaceService.java
+   - main file se aayi request ko backend modules tak bhejta hai
+
+Technology / library used by this person:
+
+1. Java
+   - "Maine Java use kiya because menu flow aur modules ko methods aur classes ke through organize karna easy tha."
+
+2. java.util.Scanner
+   - "Scanner use hua hai user input lene ke liye. Current project ka prototype command-line based hai, isliye menu choice aur place details Scanner se read ki ja rahi hain."
+
+3. Java control flow
+   - "If-else, switch-case aur methods use huye hain taaki menu options clear aur manageable rahein."
+
+How to say this in presentation:
+
+"In my part, I have mainly handled the main program flow and user interaction. I used Java Scanner for user input and menu-based control flow so that the user can easily search, filter, sort, or add places."
+
+Key code lines this person can point to:
+
+1. QuickMap.java
+   - main() section
+   - "Yahan program start ho raha hai aur user ko main options mil rahe hain."
+
+2. QuickMap.java
+   - menu print section
+   - "Yahan see places aur add place options show ho rahe hain."
+
+3. QuickMap.java
+   - showViewingOptions()
+   - "Yahan viewing related options handle ho rahe hain jaise search, filter aur sorting."
+
+4. QuickMap.java
+   - addNewPlace()
+   - "Yahan user se new place ki details li ja rahi hain aur add place ka flow execute ho raha hai."
+
+5. PlaceService.java
+   - service methods
+   - "Yahan main file se aayi request backend logic tak bheji ja rahi hai."
+
+What work is already done in this module:
+
+- Main menu flow done
+- View places flow done
+- Add place flow done
+- Search/filter/sort options integration done
+- Temple category ke liye special input handling done
+
+What is left in this module:
+
+- Proper GUI / frontend banana
+- Buttons aur forms add karna
+- Search bar aur category dropdown banana
+- Map open button add karna
+- Better user experience design
+
+Suggested speaker:
+Devansh
+
+==================================================
+TEAM MEMBER 2
+MODULE: Place Data Model, Categories, and Repository
+==================================================
+
+What this person can say:
+
+"Mera part place data structure aur repository module hai. Hamare project me har jagah ko ek object ke form me represent kiya gaya hai. Har place ke andar id, name, category, rating, distance aur popularity jaise fields store hote hain. Temple category ke case me rating intentionally hide rakhi gayi hai.
+
+Iske alawa humne fixed categories define ki hain, jaise cafe, restaurant, park, hotel, picnic spot, hidden place, temple, shopping, hospital, petrol pump aur tourist place. Isse category values standard form me rehti hain aur spelling mismatch nahi hota.
+
+Repository module ka kaam sample places ko store karna hai. Abhi project ka current version database use nahi karta, isliye data memory me store ho raha hai. Jab program run hota hai tab repository sample data load karti hai, aur new place add hone par usko list me add kar leti hai.
+
+Is module ka benefit ye hai ki pura project structured data par kaam karta hai. Har place ek proper object ke form me store hota hai, jisse baaki modules ko data handle karna easy hota hai."
+
+What code this person should explain:
+
+1. MapPlace.java
+   - place object structure
+   - fields: id, name, category, rating, distance, popularity
+   - getters
+   - toString() output format
+   - temple ke liye rating hide logic
+
+2. PlaceCategory.java
+   - fixed category names define karta hai
+
+3. PlaceRepository.java
+   - sample places load karta hai
+   - all places return karta hai
+   - new place add karta hai
+   - next id generate karta hai
+
+Technology / library used by this person:
+
+1. Java
+   - "Maine Java use kiya because object-oriented structure ke through place data ko proper model class me define karna easy hua."
+
+2. Java classes and objects
+   - "Har place ko object ke form me store kiya gaya hai. Isse har jagah ki details ek structured format me milti hain."
+
+3. java.util.ArrayList
+   - "ArrayList repository me places ko runtime me store karne ke liye use hui hai. Jab tak database add nahi hota, tab tak ye in-memory storage ka kaam kar rahi hai."
+
+4. Enum
+   - "Category ko enum me define kiya gaya hai taaki fixed category names hi use hon aur galat spelling na aaye."
+
+How to say this in presentation:
+
+"In my part, I have mainly handled the place data structure, category definitions, and repository. I used Java classes for the place model, enum for standard categories, and ArrayList for temporary in-memory storage."
+
+Key code lines this person can point to:
+
+1. MapPlace.java
+   - field declarations
+   - "Yahan har place ki properties define hui hain."
+
+2. MapPlace.java
+   - constructor
+   - "Yahan ek place object initialize ho raha hai."
+
+3. MapPlace.java
+   - toString()
+   - "Yahan place ko readable output format me convert kiya gaya hai."
+
+4. MapPlace.java
+   - temple rating hide logic
+   - "Yahan temple ke liye rating intentionally remove ki gayi hai."
+
+5. PlaceCategory.java
+   - enum values
+   - "Yahan standard categories store ki gayi hain."
+
+6. PlaceRepository.java
+   - loadSampleData()
+   - "Yahan sample places initialize kiye gaye hain."
+
+7. PlaceRepository.java
+   - addPlace()
+   - "Yahan new place list me add hota hai."
+
+What work is already done in this module:
+
+- Place model structure done
+- Category enum done
+- Sample data repository done
+- Add place storage done
+- Temple special display handling done
+
+What is left in this module:
+
+- Database integration
+- Latitude aur longitude fields add karna
+- Permanent storage banana
+- User-added data persist karna
+- More realistic place metadata add karna
+
+Suggested speaker:
+Dhruv
+
+==================================================
+TEAM MEMBER 3
+MODULE: Search, Sorting, and Future Map Integration
+==================================================
+
+What this person can say:
+
+"Mera part search aur sorting module hai. Is project me jab user place name search karta hai to system list ke andar us jagah ko find karta hai aur milne par uska data return karta hai.
+
+Sorting module ka kaam places ko alag-alag basis par arrange karna hai. Abhi hum rating, distance aur popularity ke basis par sorting kar rahe hain. Rating me highest rated places pehle aate hain, distance me nearest place pehle aata hai, aur popularity me most popular place sabse upar aata hai.
+
+Is module me special handling bhi ki gayi hai. For example temple category me rating hide hoti hai, aur agar distance available nahi ho, jaise user-added place me, to usko sorting ke time properly handle kiya jata hai.
+
+Ye part DAA perspective se important hai because yahi project ka algorithmic behavior dikhata hai. Search aur sorting dono user ko better discovery experience dete hain.
+
+Future me isi module ko map integration aur live location ke saath extend kiya jayega. Tab user location ke basis par real nearby places aur real distance calculate hogi."
+
+What code this person should explain:
+
+1. PlaceNameSearch.java
+   - searchByName() place name ke basis par search karta hai
+
+2. PlaceSorter.java
+   - sortByRating()
+   - sortByDistance()
+   - sortByPopularity()
+
+3. PlaceService.java
+   - search aur sorting methods ko expose karta hai
+
+Technology / library used by this person:
+
+1. Java
+   - "Maine Java use kiya because search aur sorting logic ko separate methods me clean tarah se implement karna easy tha."
+
+2. java.util.List
+   - "List use hui hai places ke collection ko process karne ke liye."
+
+3. java.util.Comparator
+   - "Comparator use hua hai sorting define karne ke liye. Isse hum different basis par order set kar pa rahe hain."
+
+4. Java loops and conditions
+   - "Search aur special case handling ke liye loops aur conditions use huye hain."
+
+How to say this in presentation:
+
+"In my part, I have mainly handled search and sorting logic. I used Java lists and comparators so that places can be searched by name and sorted by rating, distance, and popularity."
+
+Key code lines this person can point to:
+
+1. PlaceNameSearch.java
+   - searchByName()
+   - "Yahan linear search ke through place find kiya ja raha hai."
+
+2. PlaceSorter.java
+   - sortByRating()
+   - "Yahan rating ke basis par descending order me sorting ho rahi hai."
+
+3. PlaceSorter.java
+   - sortByDistance()
+   - "Yahan distance ke basis par nearest places pehle dikh rahe hain."
+
+4. PlaceSorter.java
+   - sortByPopularity()
+   - "Yahan popularity ke basis par most popular places upar aa rahe hain."
+
+5. PlaceSorter.java
+   - unavailable distance handling
+   - "Yahan missing distance wale places ko safely handle kiya gaya hai."
+
+6. PlaceService.java
+   - service search/sort methods
+   - "Yahan sorting aur searching ko main flow ke saath connect kiya gaya hai."
+
+What work is already done in this module:
+
+- Name-based search done
+- Sort by rating done
+- Sort by distance done
+- Sort by popularity done
+- Missing distance handling done
+
+What is left in this module:
+
+- Real nearby search
+- Coordinates-based distance calculation
+- Google Maps linking
+- Live location support
+- Better optimized search for large dataset
+- Recommendation system base logic
+
+Suggested speaker:
+Kavyansh
+
+==================================================
+FINAL DEMO ORDER
+==================================================
+
+Best order of speaking:
+
+1. Dhruv
+   Topic: place model, categories, and repository
+
+2. Kavyansh
+   Topic: search, sorting, and future map integration
+
+3. Devansh
+   Topic: main flow, user interaction, and full integration
+
+==================================================
+SHORT COMMON INTRO
+==================================================
+
+"Good morning everyone. Hamare project ka title Quick Map hai. Is project ka main aim hai users ko nearby aur useful places simple way me dikhana. Current phase me humne core backend logic complete kiya hai jisme place management, searching, filtering, sorting, aur new place add karna include hai."
+
+==================================================
+SHORT COMMON ENDING
+==================================================
+
+"Overall, humne place handling, search, aur sorting ka main logic complete kar liya hai. Jo major work abhi future me bacha hai wo frontend, map integration, live location, aur permanent database storage hai. Thank you."
